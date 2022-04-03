@@ -3,7 +3,7 @@ import { HopeThemeSidebarItem } from "vuepress-theme-hope";
 export default {
   text: "前端",
   icon: "news",
-  prefix: "frontend/",
+  prefix: "/frontend/",
   collapsable: true,
   children: [
     {
@@ -36,12 +36,7 @@ export default {
       icon: "vue",
       collapsable: true,
       prefix: "vue/",
-      children: [
-        "01简单使用和插值操作.md",
-        "02动态绑定、计算属性和事件监听.md",
-        "03条件渲染和循环渲染.md",
-        "04JavaScript补充知识点和v-model的使用.md"
-      ],
+      children: "structure",
     },
   ],
 } as HopeThemeSidebarItem;

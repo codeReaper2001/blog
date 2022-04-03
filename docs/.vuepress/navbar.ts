@@ -27,21 +27,25 @@ export default defineNavbarConfig([
     prefix: "/backend/",
     children: [
       {
-        text: "jvm",
-        link: ""
+        text: "java基础",
+        link: "java基础/注解和反射/注解.md"
       },
-      {
-        text: "java并发编程",
-        link: ""
-      },
-      {
-        text: "mysql",
-        link: ""
-      },
-      {
-        text: "redis",
-        link: ""
-      },
+      // {
+      //   text: "jvm",
+      //   link: ""
+      // },
+      // {
+      //   text: "java并发编程",
+      //   link: ""
+      // },
+      // {
+      //   text: "mysql",
+      //   link: ""
+      // },
+      // {
+      //   text: "redis",
+      //   link: ""
+      // },
     ],
   },
   {
