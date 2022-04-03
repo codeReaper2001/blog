@@ -3,11 +3,11 @@
 [[toc]]
 ## 开发板上LED灯相关的电路图
 
-<img src="https://img-blog.csdnimg.cn/20210710220032825.png" width="200x" />
+<img src="https://img-blog.csdnimg.cn/20210710220032825.png" style="zoom:80%;" />
 
 这是P2相关7个引脚的电路图，在默认情况下它是直接接着VCC的，即默认为高电平。
 
-<img src="https://img-blog.csdnimg.cn/20210710220137921.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhcl8yMzM=,size_16,color_FFFFFF,t_70" width="300x" />
+<img src="https://img-blog.csdnimg.cn/20210710220137921.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhcl8yMzM=,size_16,color_FFFFFF,t_70" style="zoom:80%;" />
 
 可以看到，8个LED灯分别是和单片机上P20~P27这8个引脚联系起来的，即一端是VCC，另一端是单片机上的端口，这样我们只需要将引脚端电平置为低电平即可将对应的LED点亮。
 
@@ -26,7 +26,7 @@ int main() {
 ```
 代码说明：首先我们需要引入单片机的头文件REG52.H，里面包含了许多寄存器的地址：
 
-<img src="https://img-blog.csdnimg.cn/20210710200930728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhcl8yMzM=,size_16,color_FFFFFF,t_70" width="350x" />
+<img src="https://img-blog.csdnimg.cn/20210710200930728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhcl8yMzM=,size_16,color_FFFFFF,t_70" style="zoom:80%;" />
 
 我们可以使用类似`sbit led = P2^0;`来指定P2寄存器的某一位，例如这里我们指定P2寄存器的第一个bit。然后我们在main函数中将其的值设置为0，即可看到第一个LED灯点亮：
 
