@@ -2,13 +2,13 @@ import { HopeThemeSidebarItem } from "vuepress-theme-hope";
 
 export default {
   text: "前端",
-  icon: "note",
+  icon: "news",
   prefix: "frontend/",
   collapsable: true,
   children: [
     {
       text: "CSS",
-      icon: "note",
+      icon: "launch",
       // collapsable: true,
       prefix: "css/",
       children: [
@@ -18,7 +18,7 @@ export default {
     },
     {
       text: "Typescript",
-      icon: "note",
+      icon: "typescript",
       // collapsable: true,
       prefix: "typescript/",
       children: [
@@ -30,7 +30,7 @@ export default {
     },
     {
       text: "Vue",
-      icon: "note",
+      icon: "vue",
       prefix: "vue/",
       children: [
         "01简单使用和插值操作.md",

@@ -4,7 +4,7 @@ export default {
     text: "单片机",
     prefix: "singlechip/",
     collapsable: true,
-    icon: "note",
+    icon: "customize",
     children: [
         "01项目的建立和vscode代码编辑环境的设置.md",
         "02开发板LED灯的控制.md",

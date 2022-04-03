@@ -2,19 +2,19 @@ import { HopeThemeSidebarItem } from "vuepress-theme-hope";
 
 export default {
   text: "后端",
-  icon: "note",
+  icon: "api",
   prefix: "backend/",
   collapsable: true,
   children: [
     {
       text: "java基础",
-      icon: "note",
+      icon: "java",
       collapsable: true,
       prefix: "java基础/",
       children: [
         {
           text: "注解和反射",
-          icon: "note",
+          icon: "java",
           prefix: "注解和反射/",
           children: [
             "注解.md",
@@ -24,7 +24,7 @@ export default {
         },
         {
           text: "java8特性",
-          icon: "note",
+          icon: "java",
           prefix: "java8特性/",
           children: [
             "Lambda表达式（一）.md",

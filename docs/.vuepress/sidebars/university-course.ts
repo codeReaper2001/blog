@@ -4,13 +4,13 @@ export default {
   text: "大学课程",
   prefix: "university-course/",
   collapsable: true,
-  icon: "note",
+  icon: "study",
   children: [
     {
       text: "计算机网络",
       prefix: "计算机网络/",
       collapsable: true,
-      icon: "note",
+      icon: "network",
       children:[
         "01概述.md",
         "02物理层.md",

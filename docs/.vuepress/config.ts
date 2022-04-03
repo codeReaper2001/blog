@@ -4,9 +4,9 @@ import themeConfig from "./themeConfig";
 export default defineHopeConfig({
   lang: "zh-CN",
   title: "CodeReaper's Blog",
-  description: "vuepress-theme-hope 的演示",
+  description: "个人博客",
 
-  base: "/",
+  base: "/blog/",
 
   head: [
     [
