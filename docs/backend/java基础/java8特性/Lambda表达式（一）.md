@@ -175,8 +175,10 @@ Employee(name=田七, age=16, salary=4999.9)
 ```
 
 ## 二、Lambda运算符和对应语法
-![在这里插入图片描述](https://img2020.cnblogs.com/blog/2489898/202108/2489898-20210803230009954-681113283.png)
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/2489898-20210803230009954-681113283.png" alt="在这里插入图片描述" style="zoom:80%;" />
+
 ### 语法格式
+
 语法格式一：无参数，无返回值
 `() -> System.out.println("hello world");`
 ```java
@@ -332,4 +334,4 @@ public void t3() {
 }
 ```
 
-下一步：[Java8 Lambda表达式（二）](https://www.cnblogs.com/CodeReaper/p/15096902.html)
+

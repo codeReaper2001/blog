@@ -3,11 +3,11 @@
 [[toc]]
 ## 开发板上LED灯相关的电路图
 
-<img src="https://img-blog.csdnimg.cn/20210710220032825.png" style="zoom:80%;" />
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710220032825.png" style="zoom:80%;" />
 
 这是P2相关7个引脚的电路图，在默认情况下它是直接接着VCC的，即默认为高电平。
 
-<img src="https://img-blog.csdnimg.cn/20210710220137921.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhcl8yMzM=,size_16,color_FFFFFF,t_70" style="zoom:80%;" />
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710220137921.png" style="zoom:80%;" />
 
 可以看到，8个LED灯分别是和单片机上P20~P27这8个引脚联系起来的，即一端是VCC，另一端是单片机上的端口，这样我们只需要将引脚端电平置为低电平即可将对应的LED点亮。
 
@@ -26,11 +26,11 @@ int main() {
 ```
 代码说明：首先我们需要引入单片机的头文件REG52.H，里面包含了许多寄存器的地址：
 
-<img src="https://img-blog.csdnimg.cn/20210710200930728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhcl8yMzM=,size_16,color_FFFFFF,t_70" style="zoom:80%;" />
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710200930728.png" style="zoom:80%;" />
 
 我们可以使用类似`sbit led = P2^0;`来指定P2寄存器的某一位，例如这里我们指定P2寄存器的第一个bit。然后我们在main函数中将其的值设置为0，即可看到第一个LED灯点亮：
 
-<img src="https://img-blog.csdnimg.cn/20210710201756877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhcl8yMzM=,size_16,color_FFFFFF,t_70" width="600x" />
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710201756877.png" width="600x" />
 
 ## LED闪烁
 我们先设置一个延时函数`deley()`：
@@ -65,7 +65,9 @@ int main() {
 }
 ```
 运行结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210710203558688.gif)
+
+![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710203558688.gif)
+
 > tips: 推荐一个GIF制作网站：[https://www.tutieshi.com/video/](https://www.tutieshi.com/video/)，免费制作GIF，为良心网站点赞！
 
 ## LED流水灯
@@ -128,7 +130,9 @@ LED+=0x80;
 于是这样就完全实现了流水灯。
 
 运行效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210710221312399.gif)
+
+![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710221312399.gif)
+
 （后面还有几秒钟，但GIF要超过csdn的限定大小了。。。）
 
 ## 其他效果
@@ -156,7 +160,9 @@ int main() {
 思路是让一个变量从0开始计数到0xff，LED对应的bit是0发光1熄灭的，这刚好是和我们的计数变量的二进制位模式相反，因此使用`LED = 0xff - cnt`进行取反，进而使LED显示与计数变量的变化对应起来。
 
 运行效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210710222429256.gif)
+
+![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710222429256.gif)
+
 但是此时的灯光计数器最低位在最左边，看起来不太舒服，因此希望**修改最低位在最右边**。
 
 那么我们仍然使用cnt作为计数变量，它将从0x00变化到0xff，然后我们再思考建立cnt到LED的映射关系：
@@ -201,11 +207,16 @@ u8 reverse(u8 x) {
 }
 ```
 运行效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210710225006796.gif)
+
+![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710225006796.gif)
+
 ### 进阶版流水灯
 效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711002229988.gif)
+
+![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210711002229988.gif)
+
 思路：原来的最基本的流水灯部分我们已经建立了bit为1时对应的灯亮的映射，即`LED = 0xff - val;`，然后为了实现这个效果，我们的val变量的变化情况应该如下所示：
+
 ```cpp
 0000 0000
 0000 0001
