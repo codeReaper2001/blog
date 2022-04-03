@@ -8,6 +8,6 @@ export default defineSidebarConfig([
   "",
   frontend,
   backend,
-  singlechip,
   universityCourse,
+  singlechip,
 ]);

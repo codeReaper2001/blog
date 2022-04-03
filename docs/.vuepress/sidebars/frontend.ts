@@ -9,17 +9,20 @@ export default {
     {
       text: "CSS",
       icon: "launch",
-      // collapsable: true,
+      collapsable: true,
       prefix: "css/",
       children: [
         "浮动属性.md",
-        "定位属性position.md"
+        "定位属性position.md",
+        "display属性.md",
+        "flex布局.md",
+        "grid布局.md",
       ],
     },
     {
       text: "Typescript",
       icon: "typescript",
-      // collapsable: true,
+      collapsable: true,
       prefix: "typescript/",
       children: [
         "环境搭建和数据类型.md",
@@ -31,6 +34,7 @@ export default {
     {
       text: "Vue",
       icon: "vue",
+      collapsable: true,
       prefix: "vue/",
       children: [
         "01简单使用和插值操作.md",
