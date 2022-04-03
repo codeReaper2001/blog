@@ -1,12 +1,19 @@
-.theme-hope-content img {
-  // image-rendering: -moz-crisp-edges;
-  // image-rendering: -o-crisp-edges;
-  // image-rendering: -webkit-optimize-contrast;
-  // image-rendering: crisp-edges;
-  // -ms-interpolation-mode: nearest-neighbor;
+.theme-hope-content {
+  img {
+    image-rendering       : -moz-crisp-edges;
+    image-rendering       : -o-crisp-edges;
+    image-rendering       : -webkit-optimize-contrast;
+    image-rendering       : crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
 
-  border-radius: 3px;
-  box-shadow   : 0 1px 15px rgba(27, 31, 35, .15), 0 0 1px rgba(106, 115, 125, .35);
-  display: block;
-  margin: 10px auto 0 auto;
+    border-radius: 3px;
+    box-shadow   : 0 1px 15px rgba(27, 31, 35, .15), 0 0 1px rgba(106, 115, 125, .35);
+    display      : block;
+    margin       : 10px auto 0 auto;
+  }
+
+  table {
+    display: table;
+    margin: 1rem auto 0;
+  }
 }

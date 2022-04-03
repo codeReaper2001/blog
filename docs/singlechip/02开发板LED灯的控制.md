@@ -30,7 +30,7 @@ int main() {
 
 我们可以使用类似`sbit led = P2^0;`来指定P2寄存器的某一位，例如这里我们指定P2寄存器的第一个bit。然后我们在main函数中将其的值设置为0，即可看到第一个LED灯点亮：
 
-<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710201756877.png" width="600x" />
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710201756877.png" style="zoom:67%;" />
 
 ## LED闪烁
 我们先设置一个延时函数`deley()`：
@@ -66,7 +66,7 @@ int main() {
 ```
 运行结果：
 
-![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710203558688.gif)
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710203558688.gif" alt="在这里插入图片描述"  />
 
 > tips: 推荐一个GIF制作网站：[https://www.tutieshi.com/video/](https://www.tutieshi.com/video/)，免费制作GIF，为良心网站点赞！
 
@@ -131,7 +131,7 @@ LED+=0x80;
 
 运行效果：
 
-![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710221312399.gif)
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710221312399.gif" alt="在这里插入图片描述" style="zoom:100%;" />
 
 （后面还有几秒钟，但GIF要超过csdn的限定大小了。。。）
 
@@ -161,7 +161,7 @@ int main() {
 
 运行效果：
 
-![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710222429256.gif)
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710222429256.gif" alt="在这里插入图片描述"  />
 
 但是此时的灯光计数器最低位在最左边，看起来不太舒服，因此希望**修改最低位在最右边**。
 
@@ -208,12 +208,12 @@ u8 reverse(u8 x) {
 ```
 运行效果：
 
-![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710225006796.gif)
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210710225006796.gif" alt="在这里插入图片描述"  />
 
 ### 进阶版流水灯
 效果：
 
-![在这里插入图片描述](https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210711002229988.gif)
+<img src="https://codereaper-image-bed.oss-cn-shenzhen.aliyuncs.com/img/20210711002229988.gif" alt="在这里插入图片描述"  />
 
 思路：原来的最基本的流水灯部分我们已经建立了bit为1时对应的灯亮的映射，即`LED = 0xff - val;`，然后为了实现这个效果，我们的val变量的变化情况应该如下所示：
 
